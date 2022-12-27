@@ -1,0 +1,31 @@
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+int main()
+{
+double op1 , op2 , result;
+char opr;
+//getting an expression
+scanf(&quot;%lf %c %lf&quot;,&amp;op1,&amp;opr,&amp;op2); //input format is 10 + 20
+switch(opr) {
+case &#39;+&#39; :
+result = op1 + op2;
+break;
+case &#39;-&#39; :
+result = op1 - op2;
+break;
+case &#39;/&#39; :
+result = op1 / op2;
+break;
+case &#39;*&#39; :
+result = op1 * op2;
+break;
+case &#39;%&#39; :
+result = fmod( op1 , op2); // % cannot be applied on float and double in c it m,ust be integer
+break;
+default :
+printf(&quot; Invalid operator&quot;);
+return 0;
+}
+printf(&quot; %g %c %g = %g&quot;, op1,opr,op2,result); //%g can be used only for double and float
+return 0;
+}
